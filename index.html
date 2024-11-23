@@ -9,22 +9,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Menghilangkan scroll di body */
         }
         .container-box {
-            max-width: 800px; /* Membatasi lebar box maksimal */
-            margin: auto; /* Memastikan kontainer berada di tengah */
-            padding: 20px; /* Ruang di dalam box */
-            border: 1px solid #ddd; /* Border tipis untuk box */
-            border-radius: 8px; /* Membuat sudut box melengkung */
-            background-color: #f9f9f9; /* Warna latar belakang box */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+            width: 100%;
+            max-width: 1000px; /* Lebar maksimal kontainer */
+            height: 600px; /* Tinggi tetap untuk iframe */
+            margin: 0 auto; /* Center the box horizontally */
+            padding: 20px;
+            border: 1px solid #ddd; /* Batas kotak */
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan ringan untuk box */
+            overflow: hidden; /* Menghilangkan scroll di dalam box */
         }
         iframe {
-            width: 100%; /* Lebar iframe mengikuti box */
-            height: 500px; /* Tinggi tetap */
+            width: 100%; /* Menyesuaikan lebar iframe dengan kontainer */
+            height: 100%; /* Menyesuaikan tinggi iframe dengan kontainer */
             border: none; /* Menghilangkan border bawaan iframe */
-            border-radius: 5px; /* Sudut melengkung iframe */
         }
         footer {
             margin-top: 40px;
@@ -32,12 +36,10 @@
             font-size: 0.9em;
             color: #555;
         }
+        /* Media query untuk layar kecil */
         @media (max-width: 768px) {
             .container-box {
-                padding: 15px; /* Mengurangi padding untuk layar kecil */
-            }
-            iframe {
-                height: 400px; /* Mengurangi tinggi pada layar kecil */
+                height: 500px; /* Mengurangi tinggi untuk layar kecil */
             }
         }
     </style>
