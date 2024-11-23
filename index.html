@@ -11,19 +11,34 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        .table-container {
-            margin-top: 20px;
+        .container-box {
+            max-width: 800px; /* Membatasi lebar box maksimal */
+            margin: auto; /* Memastikan kontainer berada di tengah */
+            padding: 20px; /* Ruang di dalam box */
+            border: 1px solid #ddd; /* Border tipis untuk box */
+            border-radius: 8px; /* Membuat sudut box melengkung */
+            background-color: #f9f9f9; /* Warna latar belakang box */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
         }
         iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
+            width: 100%; /* Lebar iframe mengikuti box */
+            height: 500px; /* Tinggi tetap */
+            border: none; /* Menghilangkan border bawaan iframe */
+            border-radius: 5px; /* Sudut melengkung iframe */
         }
         footer {
             margin-top: 40px;
             text-align: center;
             font-size: 0.9em;
             color: #555;
+        }
+        @media (max-width: 768px) {
+            .container-box {
+                padding: 15px; /* Mengurangi padding untuk layar kecil */
+            }
+            iframe {
+                height: 400px; /* Mengurangi tinggi pada layar kecil */
+            }
         }
     </style>
 </head>
@@ -35,8 +50,8 @@
             <p class="text-muted">Data is fetched in real-time from Google Sheets</p>
         </header>
 
-        <!-- Data Table -->
-        <div class="table-container">
+        <!-- Box Container -->
+        <div class="container-box">
             <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwx1TvOqvW-iTXArfaHj0BQpMThP1zq0Iex30v7JtwHIkWWuiCofSzIqfaGPgV3EpIeybP9RthzkkD/pubhtml?gid=1680807829&single=true&widget=true&headers=false"></iframe>
         </div>
     </div>
